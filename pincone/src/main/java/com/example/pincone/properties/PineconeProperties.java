@@ -9,7 +9,7 @@ public class PineconeProperties
     @Value("${pinecone.endpoint:https://api.pinecone.io}")
     private String pineconeEndpoint;
 
-    @Value("${pinecone.apikey}")
+    @Value("${PINECONE_API_KEY}")
     private String apiKey;
 
     private String createIndexEndpoint = "/indexes";
