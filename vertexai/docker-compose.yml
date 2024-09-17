@@ -1,0 +1,12 @@
+services:
+  vertexai:
+    image: wrangler911/vertexai:latest
+    ports:
+      - 8080:8080
+    environment:
+      - PROJECT_ID=${PROJECT_ID}
+      - LOCATION_ID=${LOCATION_ID}
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+
+    volumes:
+      - /Users/ansharma/minerepo/GoogleCloud/GenerativeAI/VertexAI/service_account:/mnt
