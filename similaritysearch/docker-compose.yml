@@ -1,0 +1,13 @@
+services:
+  similaritysearch:
+    image: wrangler911/similaritysearch:latest
+    ports:
+      - 8080:8080
+    environment:
+      - PROJECT_ID=${PROJECT_ID}
+      - LOCATION_ID=${LOCATION_ID}
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+
+    volumes:
+      - /Users/ansharma/minerepo/GoogleCloud/GenerativeAI/VertexAI/service_account:/mnt
